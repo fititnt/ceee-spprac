@@ -1,3 +1,3 @@
 all:
-	zip -r ../com_helloworld-`basename $(CURDIR)`.zip * LICENSE.txt -x Makefile
+	zip -r ../com_juridico-`basename $(CURDIR)`.zip * LICENSE.txt -x Makefile
 

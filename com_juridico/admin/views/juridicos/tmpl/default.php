@@ -12,7 +12,7 @@ defined('_JEXEC') or die;
 
 JHtml::_('behavior.tooltip');
 ?>
-<form action="<?php echo JRoute::_('index.php?option=com_helloworld'); ?>" method="post" name="adminForm">
+<form action="<?php echo JRoute::_('index.php?option=com_juridico'); ?>" method="post" name="adminForm">
 	<table class="adminlist">
 		<thead><?php echo $this->loadTemplate('head');?></thead>
 		<tfoot><?php echo $this->loadTemplate('foot');?></tfoot>

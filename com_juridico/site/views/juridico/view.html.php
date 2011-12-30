@@ -12,7 +12,7 @@ defined('_JEXEC') or die;
 
 jimport('joomla.application.component.view');
 
-class HelloWorldViewHelloWorld extends JView
+class JuridicoViewJuridico extends JView
 {
 	function display($tpl = null) 
 	{

@@ -12,8 +12,8 @@ defined('_JEXEC') or die;
 
 jimport('joomla.application.component.controller');
 
-// Get an instance of the controller prefixed by HelloWorld
-$controller = JController::getInstance('HelloWorld');
+// Get an instance of the controller prefixed by Juridico
+$controller = JController::getInstance('Juridico');
 
 // Perform the Request task
 $controller->execute(JRequest::getCmd('task'));

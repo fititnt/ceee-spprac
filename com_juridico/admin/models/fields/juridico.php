@@ -14,16 +14,16 @@ jimport('joomla.form.helper');
 
 JFormHelper::loadFieldClass('list');
 
-class JFormFieldHelloWorld extends JFormFieldList
+class JFormFieldJuridico extends JFormFieldList
 {
-	protected $type = 'HelloWorld';
+	protected $type = 'Juridico';
 
 	protected function getOptions() 
 	{
 		$db = JFactory::getDBO();
 		$query = $db->getQuery(true);
 		$query->select('a.id as id, a.greeting as greeting, b.title as category, b.id as catid');
-		$query->from('#__helloworld a');
+		$query->from('#__juridico a');
 		$query->leftJoin('#__categories b on a.catid=b.id');
 		$db->setQuery((string)$query);
 		$messages = $db->loadObjectList();

@@ -14,19 +14,19 @@ jimport('joomla.application.component.controller');
 
 // Set some global property
 $document = JFactory::getDocument();
-$document->addStyleDeclaration('.icon-48-helloworld {background-image: url(../media/com_helloworld/images/tux-48x48.png);}');
+$document->addStyleDeclaration('.icon-48-juridico {background-image: url(../media/com_juridico/images/tux-48x48.png);}');
 
 // Access check.
-if (!JFactory::getUser()->authorise('core.manage', 'com_helloworld')) 
+if (!JFactory::getUser()->authorise('core.manage', 'com_juridico')) 
 {
 	return JError::raiseWarning(404, JText::_('JERROR_ALERTNOAUTHOR'));
 }
 
 // Require helper file
-JLoader::register('HelloWorldHelper', dirname(__FILE__) . DS . 'helpers' . DS . 'helloworld.php');
+JLoader::register('JuridicoHelper', dirname(__FILE__) . DS . 'helpers' . DS . 'juridico.php');
 
-// Get an instance of the controller prefixed by HelloWorld
-$controller = JController::getInstance('HelloWorld');
+// Get an instance of the controller prefixed by Juridico
+$controller = JController::getInstance('Juridico');
 
 // Perform the Request task
 $controller->execute(JRequest::getCmd('task'));

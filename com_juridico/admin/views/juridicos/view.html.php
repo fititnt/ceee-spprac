@@ -12,7 +12,7 @@ defined('_JEXEC') or die;
 
 jimport('joomla.application.component.view');
 
-class HelloWorldViewHelloWorlds extends JView
+class JuridicoViewJuridicos extends JView
 {
 	function display($tpl = null) 
 	{
@@ -36,30 +36,30 @@ class HelloWorldViewHelloWorlds extends JView
 
 	protected function addToolBar() 
 	{
-		$canDo = HelloWorldHelper::getActions();
-		JToolBarHelper::title(JText::_('COM_HELLOWORLD_MANAGER_HELLOWORLDS'), 'helloworld');
+		$canDo = JuridicoHelper::getActions();
+		JToolBarHelper::title(JText::_('COM_JURIDICO_MANAGER_JURIDICOS'), 'juridico');
 		if ($canDo->get('core.create')) 
 		{
-			JToolBarHelper::addNew('helloworld.add', 'JTOOLBAR_NEW');
+			JToolBarHelper::addNew('juridico.add', 'JTOOLBAR_NEW');
 		}
 		if ($canDo->get('core.edit')) 
 		{
-			JToolBarHelper::editList('helloworld.edit', 'JTOOLBAR_EDIT');
+			JToolBarHelper::editList('juridico.edit', 'JTOOLBAR_EDIT');
 		}
 		if ($canDo->get('core.delete')) 
 		{
-			JToolBarHelper::deleteList('', 'helloworlds.delete', 'JTOOLBAR_DELETE');
+			JToolBarHelper::deleteList('', 'juridicos.delete', 'JTOOLBAR_DELETE');
 		}
 		if ($canDo->get('core.admin')) 
 		{
 			JToolBarHelper::divider();
-			JToolBarHelper::preferences('com_helloworld');
+			JToolBarHelper::preferences('com_juridico');
 		}
 	}
 
 	protected function setDocument() 
 	{
 		$document = JFactory::getDocument();
-		$document->setTitle(JText::_('COM_HELLOWORLD_ADMINISTRATION'));
+		$document->setTitle(JText::_('COM_JURIDICO_ADMINISTRATION'));
 	}
 }

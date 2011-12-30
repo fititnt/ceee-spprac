@@ -19,7 +19,7 @@ defined('_JEXEC') or die;
 			<?php echo JHtml::_('grid.id', $i, $item->id); ?>
 		</td>
 		<td>
-			<a href="<?php echo JRoute::_('index.php?option=com_helloworld&task=helloworld.edit&id=' . $item->id); ?>">
+			<a href="<?php echo JRoute::_('index.php?option=com_juridico&task=juridico.edit&id=' . $item->id); ?>">
 				<?php echo $item->greeting; ?>
 			</a>
 		</td>

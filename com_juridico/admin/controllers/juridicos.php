@@ -12,9 +12,9 @@ defined('_JEXEC') or die;
 
 jimport('joomla.application.component.controlleradmin');
 
-class HelloWorldControllerHelloWorlds extends JControllerAdmin
+class JuridicoControllerJuridicos extends JControllerAdmin
 {
-	public function getModel($name = 'HelloWorld', $prefix = 'HelloWorldModel') 
+	public function getModel($name = 'Juridico', $prefix = 'JuridicoModel') 
 	{
 		$model = parent::getModel($name, $prefix, array('ignore_request' => true));
 		return $model;

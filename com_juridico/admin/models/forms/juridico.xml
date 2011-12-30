@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<form addrulepath="/administrator/components/com_helloworld/models/rules">
+<form addrulepath="/administrator/components/com_juridico/models/rules">
 	<fieldset name="details">
 		<field
 			name="id"
@@ -8,8 +8,8 @@
 		<field
 			name="greeting"
 			type="text"
-			label="COM_HELLOWORLD_HELLOWORLD_FIELD_GREETING_LABEL"
-			description="COM_HELLOWORLD_HELLOWORLD_FIELD_GREETING_DESC"
+			label="COM_JURIDICO_JURIDICO_FIELD_GREETING_LABEL"
+			description="COM_JURIDICO_JURIDICO_FIELD_GREETING_DESC"
 			size="40"
 			class="inputbox validate-greeting"
 			validate="greeting"
@@ -19,11 +19,11 @@
 		<field
 			name="catid"
 			type="category"
-			extension="com_helloworld"
+			extension="com_juridico"
 			class="inputbox"
 			default=""
-			label="COM_HELLOWORLD_HELLOWORLD_FIELD_CATID_LABEL"
-			description="COM_HELLOWORLD_HELLOWORLD_FIELD_CATID_DESC"
+			label="COM_JURIDICO_JURIDICO_FIELD_CATID_LABEL"
+			description="COM_JURIDICO_JURIDICO_FIELD_CATID_DESC"
 			required="true">
 			<option value="0">JOPTION_SELECT_CATEGORY</option>
 		</field>
@@ -33,8 +33,8 @@
 			<field
 				name="show_category"
 				type="list"
-				label="COM_HELLOWORLD_HELLOWORLD_FIELD_SHOW_CATEGORY_LABEL"
-				description="COM_HELLOWORLD_HELLOWORLD_FIELD_SHOW_CATEGORY_DESC"
+				label="COM_JURIDICO_JURIDICO_FIELD_SHOW_CATEGORY_LABEL"
+				description="COM_JURIDICO_JURIDICO_FIELD_SHOW_CATEGORY_DESC"
 				default="">
 				<option value="">JGLOBAL_USE_GLOBAL</option>
 				<option value="0">JHIDE</option>

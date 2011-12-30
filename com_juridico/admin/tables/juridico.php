@@ -12,11 +12,11 @@ defined('_JEXEC') or die;
 
 jimport('joomla.database.table');
 
-class HelloWorldTableHelloWorld extends JTable
+class JuridicoTableJuridico extends JTable
 {
 	function __construct(&$db) 
 	{
-		parent::__construct('#__helloworld', 'id', $db);
+		parent::__construct('#__juridico', 'id', $db);
 	}
 	
 	public function bind($array, $ignore = '') 
@@ -50,7 +50,7 @@ class HelloWorldTableHelloWorld extends JTable
 	protected function _getAssetName()
 	{
 		$k = $this->_tbl_key;
-		return 'com_helloworld.message.'.(int) $this->$k;
+		return 'com_juridico.message.'.(int) $this->$k;
 	}
 
 	protected function _getAssetTitle()
@@ -61,7 +61,7 @@ class HelloWorldTableHelloWorld extends JTable
 	protected function _getAssetParentId()
 	{
 		$asset = JTable::getInstance('Asset');
-		$asset->loadByName('com_helloworld');
+		$asset->loadByName('com_juridico');
 		return $asset->id;
 	}
 }

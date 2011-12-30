@@ -12,16 +12,16 @@ defined('_JEXEC') or die;
 
 jimport('joomla.application.component.controller');
 
-class HelloWorldController extends JController
+class JuridicoController extends JController
 {
 	function display($cachable = false) 
 	{
 		// Set default view if not set
-		JRequest::setVar('view', JRequest::getCmd('view', 'HelloWorlds'));
+		JRequest::setVar('view', JRequest::getCmd('view', 'Juridicos'));
 		
 		parent::display($cachable);
 		
 		// Add submenu
-		HelloWorldHelper::addSubmenu('messages');
+		JuridicoHelper::addSubmenu('messages');
 	}
 }

@@ -12,7 +12,7 @@ defined('_JEXEC') or die;
 
 jimport('joomla.application.component.modellist');
 
-class HelloWorldModelHelloWorlds extends JModelList
+class JuridicoModelJuridicos extends JModelList
 {
 	protected function getListQuery() 
 	{
@@ -24,7 +24,7 @@ class HelloWorldModelHelloWorlds extends JModelList
 		$query->select('id,greeting');
 
 		// From the hello table
-		$query->from('#__helloworld');
+		$query->from('#__juridico');
 		return $query;
 	}
 }

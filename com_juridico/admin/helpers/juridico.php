@@ -10,17 +10,17 @@
 // No direct access to this file
 defined('_JEXEC') or die;
 
-class HelloWorldHelper
+class JuridicoHelper
 {
 	public static function addSubmenu($submenu) 
 	{
-		JSubMenuHelper::addEntry(JText::_('COM_HELLOWORLD_SUBMENU_MESSAGES'), 
-			'index.php?option=com_helloworld', $submenu == 'messages');
-		JSubMenuHelper::addEntry(JText::_('COM_HELLOWORLD_SUBMENU_CATEGORIES'), 
-			'index.php?option=com_categories&view=categories&extension=com_helloworld', $submenu == 'categories');
+		JSubMenuHelper::addEntry(JText::_('COM_JURIDICO_SUBMENU_MESSAGES'), 
+			'index.php?option=com_juridico', $submenu == 'messages');
+		JSubMenuHelper::addEntry(JText::_('COM_JURIDICO_SUBMENU_CATEGORIES'), 
+			'index.php?option=com_categories&view=categories&extension=com_juridico', $submenu == 'categories');
 		$document = JFactory::getDocument();
 		if ($submenu == 'categories'){ 
-			$document->setTitle(JText::_('COM_HELLOWORLD_ADMINISTRATION_CATEGORIES'));
+			$document->setTitle(JText::_('COM_JURIDICO_ADMINISTRATION_CATEGORIES'));
 		}
 	}
 
@@ -30,10 +30,10 @@ class HelloWorldHelper
 		$result	= new JObject;
 
 		if (empty($messageId)) {
-			$assetName = 'com_helloworld';
+			$assetName = 'com_juridico';
 		}
 		else {
-			$assetName = 'com_helloworld.message.'.(int) $messageId;
+			$assetName = 'com_juridico.message.'.(int) $messageId;
 		}
 
 		$actions = array(

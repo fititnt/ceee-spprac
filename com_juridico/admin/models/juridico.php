@@ -12,26 +12,26 @@ defined('_JEXEC') or die;
 
 jimport('joomla.application.component.modeladmin');
 
-class HelloWorldModelHelloWorld extends JModelAdmin
+class JuridicoModelJuridico extends JModelAdmin
 {
 	public function getForm($data = array(), $loadData = true)
 	{
 		// Get the form.
-		$form = $this->loadForm('com_helloworld.helloworld', 'helloworld', array('control' => 'jform', 'load_data' => $loadData));
+		$form = $this->loadForm('com_juridico.juridico', 'juridico', array('control' => 'jform', 'load_data' => $loadData));
 		return $form;
 	}
 
 	protected function loadFormData()
 	{
 		// Check the session for previously entered form data.
-		$data = JFactory::getApplication()->getUserState('com_helloworld.edit.helloworld.data', array());
+		$data = JFactory::getApplication()->getUserState('com_juridico.edit.juridico.data', array());
 		if(empty($data)){
 			$data = $this->getItem();
 		}
 		return $data;
 	}
     
-	public function getTable($name = '', $prefix = 'HelloWorldTable', $options = array())
+	public function getTable($name = '', $prefix = 'JuridicoTable', $options = array())
 	{
 		return parent::getTable($name, $prefix, $options);
 	}
@@ -39,6 +39,6 @@ class HelloWorldModelHelloWorld extends JModelAdmin
 	protected function allowEdit($data = array(), $key = 'id')
 	{
 		// Check specific edit permission then general edit permission.
-		return JFactory::getUser()->authorise('core.edit', 'com_helloworld.message.'.((int) isset($data[$key]) ? $data[$key] : 0)) or parent::allowEdit($data, $key);
+		return JFactory::getUser()->authorise('core.edit', 'com_juridico.message.'.((int) isset($data[$key]) ? $data[$key] : 0)) or parent::allowEdit($data, $key);
 	}
 }

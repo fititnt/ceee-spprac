@@ -2,13 +2,13 @@
 <config>
 	<fieldset
 		name="greetings"
-		label="COM_HELLOWORLD_CONFIG_GREETING_SETTINGS_LABEL"
-		description="COM_HELLOWORLD_CONFIG_GREETING_SETTINGS_DESC">
+		label="COM_JURIDICO_CONFIG_GREETING_SETTINGS_LABEL"
+		description="COM_JURIDICO_CONFIG_GREETING_SETTINGS_DESC">
 		<field
 			name="show_category"
 			type="radio"
-			label="COM_HELLOWORLD_HELLOWORLD_FIELD_SHOW_CATEGORY_LABEL"
-			description="COM_HELLOWORLD_HELLOWORLD_FIELD_SHOW_CATEGORY_DESC"
+			label="COM_JURIDICO_JURIDICO_FIELD_SHOW_CATEGORY_LABEL"
+			description="COM_JURIDICO_JURIDICO_FIELD_SHOW_CATEGORY_DESC"
 			default="0">
 			<option value="0">JHIDE</option>
 			<option value="1">JSHOW</option>
@@ -25,7 +25,7 @@
 			class="inputbox"
 			validate="rules"
 			filter="rules"
-			component="com_helloworld"
+			component="com_juridico"
 			section="component" 
 		/>
 	</fieldset>

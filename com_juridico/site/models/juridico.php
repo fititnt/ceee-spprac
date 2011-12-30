@@ -12,7 +12,7 @@ defined('_JEXEC') or die('Restricted access');
 
 jimport('joomla.application.component.modelitem');
 
-class HelloWorldModelHelloWorld extends JModelItem
+class JuridicoModelJuridico extends JModelItem
 {
 	protected $item;
 
@@ -38,7 +38,7 @@ class HelloWorldModelHelloWorld extends JModelItem
 		if (!isset($this->item)) {
 			$id = $this->getState('message.id');
 			$this->_db->setQuery($this->_db->getQuery(true)
-				->from('#__helloworld as h')
+				->from('#__juridico as h')
 				->leftJoin('#__categories as c ON h.catid = c.id')
 				->select('h.greeting, h.params, c.title as category')
 				->where('h.id=' . (int)$id));
