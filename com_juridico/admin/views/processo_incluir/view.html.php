@@ -12,7 +12,7 @@ defined('_JEXEC') or die;
 
 jimport('joomla.application.component.view');
 
-class JuridicoViewJuridico extends JView
+class JuridicoViewProcesso_incluir extends JView
 {
 	public function display($tpl = null) 
 	{
@@ -41,7 +41,7 @@ class JuridicoViewJuridico extends JView
 		$user = JFactory::getUser();
 		$userId = $user->id;
 		$canDo = JuridicoHelper::getActions($this->item->id);
-		JToolBarHelper::title($isNew ? JText::_('COM_JURIDICO_MANAGER_JURIDICO_NEW') : JText::_('COM_JURIDICO_MANAGER_JURIDICO_EDIT'), 'generic.png');
+		JToolBarHelper::title($isNew ? JText::_('COM_JURIDICO_MANAGER_JURIDICO_NEW') : JText::_('COM_JURIDICO_MANAGER_JURIDICO_EDIT'), 'juridico');
 		// Built the actions for new and existing records.
 		if ($isNew) 
 		{

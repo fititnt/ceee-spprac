@@ -11,7 +11,7 @@
 defined('_JEXEC') or die;
 
 JHtml::_('behavior.tooltip');
-?>
+?>hiho
 <form action="<?php echo JRoute::_('index.php?option=com_juridico'); ?>" method="post" name="adminForm">
 	<table class="adminlist">
 		<thead><?php echo $this->loadTemplate('head');?></thead>

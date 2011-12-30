@@ -12,7 +12,7 @@ defined('_JEXEC') or die;
 
 jimport('joomla.application.component.modellist');
 
-class JuridicoModelJuridicos extends JModelList
+class JuridicoModelProcesso_incluirs extends JModelList
 {
 	protected function getListQuery() 
 	{

@@ -12,7 +12,7 @@ defined('_JEXEC') or die;
 
 jimport('joomla.application.component.view');
 
-class JuridicoViewJuridicos extends JView
+class JuridicoViewProcesso_incluirs extends JView
 {
 	function display($tpl = null) 
 	{
@@ -40,15 +40,15 @@ class JuridicoViewJuridicos extends JView
 		JToolBarHelper::title(JText::_('COM_JURIDICO_MANAGER_JURIDICOS'), 'generic.png');
 		if ($canDo->get('core.create')) 
 		{
-			JToolBarHelper::addNew('juridico.add', 'JTOOLBAR_NEW');
+			JToolBarHelper::addNew('processo_incluir.add', 'JTOOLBAR_NEW');
 		}
 		if ($canDo->get('core.edit')) 
 		{
-			JToolBarHelper::editList('juridico.edit', 'JTOOLBAR_EDIT');
+			JToolBarHelper::editList('processo_incluir.edit', 'JTOOLBAR_EDIT');
 		}
 		if ($canDo->get('core.delete')) 
 		{
-			JToolBarHelper::deleteList('', 'juridicos.delete', 'JTOOLBAR_DELETE');
+			JToolBarHelper::deleteList('', 'processo_incluir.delete', 'JTOOLBAR_DELETE');
 		}
 		if ($canDo->get('core.admin')) 
 		{

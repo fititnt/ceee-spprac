@@ -12,7 +12,7 @@ defined('_JEXEC') or die;
 
 jimport('joomla.database.table');
 
-class JuridicoTableJuridico extends JTable
+class JuridicoTableProcesso_incluir extends JTable
 {
 	function __construct(&$db) 
 	{

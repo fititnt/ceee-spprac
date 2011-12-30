@@ -10,9 +10,9 @@
 // No direct access to this file
 defined('_JEXEC') or die;
 
-jimport('joomla.application.component.controller');
+jimport('joomla.application.component.controllerform');
 
-class JuridicoController extends JController
+class JuridicoControllerProcesso_incluir extends JControllerForm
 {
 
 }

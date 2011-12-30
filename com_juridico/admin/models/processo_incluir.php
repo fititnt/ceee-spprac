@@ -12,19 +12,19 @@ defined('_JEXEC') or die;
 
 jimport('joomla.application.component.modeladmin');
 
-class JuridicoModelJuridico extends JModelAdmin
+class JuridicoModelProcesso_incluir extends JModelAdmin
 {
 	public function getForm($data = array(), $loadData = true)
 	{
 		// Get the form.
-		$form = $this->loadForm('com_juridico.juridico', 'juridico', array('control' => 'jform', 'load_data' => $loadData));
+		$form = $this->loadForm('com_juridico.processo_incluir', 'processo_incluir', array('control' => 'jform', 'load_data' => $loadData));
 		return $form;
 	}
 
 	protected function loadFormData()
 	{
 		// Check the session for previously entered form data.
-		$data = JFactory::getApplication()->getUserState('com_juridico.edit.juridico.data', array());
+		$data = JFactory::getApplication()->getUserState('com_juridico.edit.processo_incluir.data', array());
 		if(empty($data)){
 			$data = $this->getItem();
 		}
