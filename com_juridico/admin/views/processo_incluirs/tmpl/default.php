@@ -28,6 +28,8 @@ JHtml::_('behavior.tooltip');
 <?php
 jimport('spprac.spprac');
 $slib = Jspprac::getRemoteData();
+$slib->set('target', 'http://google.com');
+echo $slib->get('target');
 //
 
 ?>
