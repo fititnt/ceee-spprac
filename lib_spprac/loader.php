@@ -6,18 +6,13 @@
  * @copyright   Copyright (C) 2011 Webdesign Assessoria em Tecniligia da Informacao. All rights reserved.
  * @license     GNU General Public License version 3. See license.txt
  */
-defined('JDLIB_PATH') or die('Restricted access');
+defined('JPPRAC_PATH') or die('Restricted access');
 
 /**
  *
  */
-abstract class JDLib {
+abstract class Jspprac {
 
-    /**
-     *
-     * @var Object $benchmark
-     */
-    public static $benchmark;
 
     /**
      *
@@ -26,19 +21,11 @@ abstract class JDLib {
     public static $log;
 
     /**
-     * Return Benchmark Object, creating if aready doesent exists
      *
-     * @return Object $benchmark
+     * @var Object $remodedata
      */
-    public static function getBenchmark() {
-        if (!self::$benchmark) {
-            jimport('spprac.benchmark.load');
-
-            self::$benchmark = LoadBenchmark::getInstance();
-        }
-        return self::$benchmark;
-    }
-
+    public static $remodedata;
+	
     /**
      * Return Log Object, creating if aready doesent exists
      *
@@ -52,5 +39,20 @@ abstract class JDLib {
         }
         return self::$log;
     }
+	
+    /**
+     * Retorna informacoes de uma fonte remota, ja parseada
+     *
+     * @return Object $remodedata
+     */
+    public static function getRemoteData() {
+        if (!self::$remodedata) {
+            jimport('spprac.remotedata.load');
+
+            self::$remodedata = SPPRACLoadRemoteData::getInstance();
+        }
+        return self::$remodedata;
+    }
+	
 
 }

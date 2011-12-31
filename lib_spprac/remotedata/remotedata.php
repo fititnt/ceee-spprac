@@ -8,7 +8,7 @@
  */
 defined('JPPRAC_PATH') or die('Restricted access');
 
-class JDLibLog {
+class SPPRARemoteData {
 
     /**
      * @var Object $log
