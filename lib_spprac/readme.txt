@@ -1,5 +1,5 @@
-PHP Debug Library
-Helper for debug on Joomla 1.7+
+PHP Spprac Library
+Helper for spprac on Joomla 1.7+
     -> log: save a log in text files, using Joomla native logger;
     -> benchmark: save in a stack times of execution of code
 
@@ -20,14 +20,14 @@ License:
 Install on your site like any normal library.
 
 Example 1, log:
-     jimport('debug.debug');
+     jimport('spprac.spprac');
      $log = JDLib::getLog();
-     $log->debug("JDLib Debug test");
+     $log->spprac("JDLib Spprac test");
 
 Example 2, log:
-     jimport('debug.debug');
+     jimport('spprac.spprac');
      $log = JDLib::getLog();
-     $log->debug(__CLASS__.':'.__METHOD__.':'.__LINE__.'>'."Initialized");
+     $log->spprac(__CLASS__.':'.__METHOD__.':'.__LINE__.'>'."Initialized");
 
 Please read /doc for more information
 

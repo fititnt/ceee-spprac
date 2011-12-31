@@ -4,8 +4,8 @@
     version="1.7" 
     method="upgrade"
     >
-    <libraryname>debug</libraryname>
-    <name>debug</name>
+    <libraryname>spprac</libraryname>
+    <name>spprac</name>
     <description>JDLIB_DESCRIPTION</description>
     <creationDate>2011-11-26</creationDate>
     <author>Emerson Rocha Luiz</author>
@@ -15,8 +15,8 @@
     <license>GNU General Public License version 3. See license.txt</license>
     <version>0.4rc2</version>
     <files>
-        <file>debug.php</file>
-        <file>debug.xml</file>
+        <file>spprac.php</file>
+        <file>spprac.xml</file>
         <file>index.html</file>
         <file>license.txt</file>
         <file>loader.php</file>
@@ -27,7 +27,7 @@
         <!--<folder>doc</folder>-->
     </files>
     <languages folder="language">
-        <language tag="en-GB">en-GB/en-GB.lib_debug.ini</language>
-        <language tag="en-GB">en-GB/en-GB.lib_debug.sys.ini</language>
+        <language tag="en-GB">en-GB/en-GB.lib_spprac.ini</language>
+        <language tag="en-GB">en-GB/en-GB.lib_spprac.sys.ini</language>
     </languages>
 </extension>

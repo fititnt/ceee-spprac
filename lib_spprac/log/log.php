@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @package     Debug Library
+ * @package     Spprac Library
  * @author      Emerson Rocha Luiz - emerson at webdesign.eng.br - fititnt
  * @copyright   Copyright (C) 2011 Webdesign Assessoria em Tecniligia da Informacao. All rights reserved.
  * @license     GNU General Public License version 3. See license.txt
@@ -35,8 +35,8 @@ class JDLibLog {
 
     /**
      * Error level
-     * Level 9: BREAKPOINT. Alias for DEBUG.
-     * Level 8: DEBUG. Debugging message.
+     * Level 9: BREAKPOINT. Alias for SPPRAC.
+     * Level 8: SPPRAC. Sppracging message.
      * Level 7: INFO. Informational message.
      * Level 6: NOTICE. Normal, but significant condition.
      * Level 5: WARNING. Warning conditions.
@@ -77,7 +77,7 @@ class JDLibLog {
     }
 
     /**
-     * Debug information
+     * Spprac information
      * $aditionalInfo = "\e" is for scape char.
      * 
      * @return void
@@ -92,23 +92,23 @@ class JDLibLog {
     }
 
     /**
-     * Debug information
+     * Spprac information
      * @example
      * @code
-     *      jimport('debug.debug');
+     *      jimport('spprac.spprac');
      *      $log = JDLib::getLog();
-     *      $log->debug("JDLib Debug test");
+     *      $log->spprac("JDLib Spprac test");
      * @endcode
      * @example
      * @code
-     *      jimport('debug.debug');
+     *      jimport('spprac.spprac');
      *      $log = JDLib::getLog();
-     *      $log->debug(__CLASS__.':'.__METHOD__.':'.__LINE__.'>'."Initialized");
+     *      $log->spprac(__CLASS__.':'.__METHOD__.':'.__LINE__.'>'."Initialized");
      * @endcode
      * 
      * @return void
      */
-    public function debug($message, $aditionalInfo = "\e") {
+    public function spprac($message, $aditionalInfo = "\e") {
         if ($this->level >= 8) {
             if ($aditionalInfo != "\e") {
                 $message = $this->_printfSpecial($message, $aditionalInfo);

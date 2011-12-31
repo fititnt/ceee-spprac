@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @package     Debug Library
+ * @package     Spprac Library
  * @author      Emerson Rocha Luiz - emerson at webdesign.eng.br - @fititnt
  * @copyright   Copyright (C) 2011 Webdesign Assessoria em Tecniligia da Informacao. All rights reserved.
  * @license     GNU General Public License version 3. See license.txt
@@ -13,8 +13,8 @@ if (!defined('JDLIB_PATH')) {
 }
 
 /**
- * Level 9: BREAKPOINT. Alias for DEBUG.
- * Level 8: DEBUG. Debugging message.
+ * Level 9: BREAKPOINT. Alias for SPPRAC.
+ * Level 8: SPPRAC. Sppracging message.
  * Level 7: INFO. Informational message.
  * Level 6: NOTICE. Normal, but significant condition.
  * Level 5: WARNING. Warning conditions.
