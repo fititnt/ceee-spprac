@@ -11,7 +11,7 @@
 defined('_JEXEC') or die;
 
 JHtml::_('behavior.tooltip');
-?>hiho
+?>
 <form action="<?php echo JRoute::_('index.php?option=com_juridico'); ?>" method="post" name="adminForm">
 	<table class="adminlist">
 		<thead><?php echo $this->loadTemplate('head');?></thead>
@@ -24,3 +24,17 @@ JHtml::_('behavior.tooltip');
 		<?php echo JHtml::_('form.token'); ?>
 	</div>
 </form>
+
+<?php
+
+//jimport('spprac.spprac');
+//$slib = Jspprac::getRemoteData();
+//$slib->set('target', 'http://www.trt4.jus.br/portal/portal/trt4/consultas/consulta_rapida/ConsultaProcessualWindow');
+
+jimport('spprac.spprac');
+$slib = Jspprac::getRemoteData();
+echo $slib->dumpContentParsed('http://fititnt.org', 'ppId', 'rodape-alpha');
+
+//
+
+?>
