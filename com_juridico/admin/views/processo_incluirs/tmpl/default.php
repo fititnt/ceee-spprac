@@ -28,8 +28,11 @@ JHtml::_('behavior.tooltip');
 <?php
 jimport('spprac.spprac');
 $slib = Jspprac::getRemoteData();
-$slib->set('target', 'http://google.com');
+$slib->set('target', 'http://www.trt4.jus.br/portal/portal/trt4/consultas/consulta_rapida/ConsultaProcessualWindow');
 echo $slib->get('target');
+
+echo $slib->dumpContentRaw();
+
 //
 
 ?>

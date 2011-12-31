@@ -8,6 +8,9 @@
  */
 defined('JPPRAC_PATH') or die('Restricted access');
 
+require_once 'PageParser.php';
+require_once 'WebDig.php';
+
 class SPPRARemoteData {
 	
 	
@@ -17,7 +20,54 @@ class SPPRARemoteData {
 	 * @var string $target
 	 */
 	private $target;
+	
+	/**
+	 * Instancia da classe PageParser
+	 * 
+	 * @var instancia de classe
+	 */
+	private $PageParser;
+	
+	/**
+	 * Instancia da classe WebDig
+	 * 
+	 * @var instancia de classe
+	 */
+	private $WebDig;
+	
 
+	
+	/**
+	 * Automaticamente carrega as bibliotecas PageParser e WebDig
+	 * 
+	 */
+	function __construct(){
+		$this->PageParser = new PageParser;
+		$this->WebDig = new WebDig;
+
+	}
+	
+	
+	/**
+	 * Retorna o conteudo inteiro de uma fonte externa. Caso o parametro
+	 * $target nao esteja preenchido, usara o $this->target da classe
+	 * 
+	 * @param string $target
+	 * @return string Conteudo do target
+	 */
+	public function dumpContentRaw($target = NULL){
+		if(!$target){
+			$target = $this->target;
+		}
+		if(!$target){
+			return JTEXT::_('LIB_SPPRAC_TARGET_NOT_DEFINED');
+		}
+		
+		$contents = $this->WebDig->dig($target, true);
+		return $contents;
+	}
+	
+	
     /**
      * Delete (set to NULL) generic variable
      * 
