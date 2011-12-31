@@ -26,12 +26,14 @@ JHtml::_('behavior.tooltip');
 </form>
 
 <?php
+
+//jimport('spprac.spprac');
+//$slib = Jspprac::getRemoteData();
+//$slib->set('target', 'http://www.trt4.jus.br/portal/portal/trt4/consultas/consulta_rapida/ConsultaProcessualWindow');
+
 jimport('spprac.spprac');
 $slib = Jspprac::getRemoteData();
-$slib->set('target', 'http://www.trt4.jus.br/portal/portal/trt4/consultas/consulta_rapida/ConsultaProcessualWindow');
-echo $slib->get('target');
-
-echo $slib->dumpContentRaw();
+echo $slib->dumpContentParsed('http://fititnt.org', 'ppId', 'rodape-alpha');
 
 //
 
